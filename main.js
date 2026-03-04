@@ -6,6 +6,15 @@ const resume = document.querySelector(".resume");
 const counterDisplay = document.querySelector("h3");
 let count = 0;
 
+//Function
+
+//click Laser Effect
+const laser = () => {
+  const audio = new Audio();
+  audio.src = "/assets/laser.mp3";
+  audio.play();
+};
+
 // ## Feat : Bubble creation
 
 const addBubble = () => {
@@ -39,6 +48,7 @@ const addBubble = () => {
 
   //shoot Event
   bubble.addEventListener("click", () => {
+    laser();
     bubble.remove();
     count++;
     counterDisplay.textContent = count;
