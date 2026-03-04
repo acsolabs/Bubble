@@ -1,0 +1,12 @@
+body {
+  background: url(/assets/img/bg.jpg) center/cover;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.bubble {
+  position: absolute;
+  background: rgb(255, 166, 0, 0.6);
+  border-radius: 300px;
+  transition: all 0.3s;
+}
