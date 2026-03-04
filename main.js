@@ -15,7 +15,8 @@ const addBubble = () => {
   bubble.style.height = bubbleSize;
   bubble.style.width = bubbleSize;
 
-  bubble.style.top = Math.random() * 100 + "%";
+  //   position
+  bubble.style.top = Math.random() * 100 + 50 + "%";
   bubble.style.left = Math.random() * 100 + "%";
 
   //   color
