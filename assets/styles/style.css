@@ -9,4 +9,16 @@ body {
   background: rgb(255, 166, 0, 0.6);
   border-radius: 300px;
   transition: all 0.3s;
+  animation: anim 8s forwards;
+  opacity: 0;
+  filter: hue-rotate(0deg);
+}
+
+@keyframes anim {
+  to {
+    top: -350px;
+    left: var(--left);
+    opacity: 1;
+    filter: hue-rotate(720deg);
+  }
 }

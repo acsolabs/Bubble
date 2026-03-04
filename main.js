@@ -19,6 +19,8 @@ const addBubble = () => {
   bubble.style.top = Math.random() * 100 + 50 + "%";
   bubble.style.left = Math.random() * 100 + "%";
 
+  bubble.style.setProperty("--left", Math.random() * 100 + "%");
+
   //   color
   const hue = Math.random() * 360;
   const opacity = Math.random() * 0.5 + 0.4;
@@ -29,10 +31,11 @@ const addBubble = () => {
 addBubble();
 
 // ## Feat : Pause
-// const interval = setInterval(() => {
-//   addBubble();
-// }, 1000);
+const interval = setInterval(() => {
+  addBubble();
+}, 1000);
 
-// resume.addEventListener("click", () => {
-//   clearInterval(interval);
-// });
+resume.addEventListener("click", (e) => {
+  clearInterval(interval);
+  e.stopPropagation();
+});
