@@ -8,10 +8,22 @@ let count = 0;
 
 //Function
 
-//click Laser Effect
+//click sound Effect
 const laser = () => {
   const audio = new Audio();
   audio.src = "/assets/laser.mp3";
+  audio.play();
+};
+
+const missedShoot = () => {
+  const audio = new Audio();
+  audio.src = "/assets/missed.mp3";
+  audio.play();
+};
+
+const exploding = () => {
+  const audio = new Audio();
+  audio.src = "/assets/exploding.mp3";
   audio.play();
 };
 
@@ -52,14 +64,28 @@ const addBubble = () => {
     bubble.remove();
     count++;
     counterDisplay.textContent = count;
+
+    setTimeout(() => {
+      exploding();
+    }, 300);
   });
 };
 
+document.body.addEventListener("click", () => {
+  missedShoot();
+});
+
 // bubble generator
-const interval = setInterval(addBubble, 4000);
+const interval = setInterval(addBubble, 500);
 
 // ## Feat : Pause
 
 resume.addEventListener("click", (e) => {
   clearInterval(interval);
 });
+
+// Develop next features :
+// add reset button, start button
+// select level button range
+// fix the problem with the sound
+// factorize the code
