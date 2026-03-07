@@ -35,9 +35,19 @@ h3 {
 
 .resume {
   padding: 8px 14px;
-  background: rgba(255, 255, 255, 0.21);
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.066);
+  color: antiquewhite;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .resume:hover {
-  background: red;
+  background: #3f5efb;
+  background: linear-gradient(
+    37deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
 }
